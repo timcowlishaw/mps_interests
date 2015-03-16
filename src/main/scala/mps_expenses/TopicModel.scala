@@ -10,7 +10,7 @@ import cc.mallet.pipe.iterator.ArrayIterator
 object TopicModel extends App {
   import Models._
   import Persistence._
-  val n = 10
+  val n = 5
   val texts = getInterests
   val instances = textsToInstances(texts)
   val model = createModel(n, instances)
