@@ -25,4 +25,10 @@ object Persistence {
       mps += mp
     }
   }
+
+  def getInterests = {
+    database withSession { implicit session =>
+        mps.map(_.interests).list
+    }
+  }
 }
